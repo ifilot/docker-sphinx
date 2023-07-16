@@ -16,12 +16,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - uses: olegtarasov/get-tag@v2.1.2
+      id: tagName
+
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v4
       with:
         images: |
-          ghcr.io/ifilot/sphinx:${GITHUB_REF#refs/tags/}
+          ghcr.io/ifilot/sphinx:$GIT_TAG_NAME
 
     - name: Log in to the Container registry
       uses: docker/login-action@v2
