@@ -54,3 +54,5 @@ RUN python3 -m venv /data/env
 RUN /data/env/bin/python3 -m pip install \
 	sphinx-rtd-theme \
 	sphinxcontrib-tikz
+
+ENV PATH="/data/env/bin:$PATH"
