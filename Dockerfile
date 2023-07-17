@@ -30,6 +30,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends
 	imagemagick \
 	ghostscript
 
+RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends \
+	pylint
+
 RUN apt-get autoremove
 RUN apt-get clean
 
@@ -52,6 +55,7 @@ RUN /data/env/bin/python3 -m pip install \
 	sphinxcontrib-tikz \
 	numpy \
 	scipy \
-	matplotlib
+	matplotlib \
+        autopep8
 
 ENV PATH="/data/env/bin:$PATH"
