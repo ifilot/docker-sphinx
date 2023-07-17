@@ -24,16 +24,20 @@ related to numerical modelling.
 * scipy
 * matplotlib
 
+### Other
+
+* autopep8
+
 ## Usage
 
 Ensure a copy of the docker image is present
 
 ```bash
-docker pull ghcr.io/ifilot/sphinx:v0.2.0
+docker pull ghcr.io/ifilot/sphinx:v0.3.0
 ```
 
 To compile the Sphinx documentation locally, run
 
 ```bash
-docker run --volume ./docs:/data/docs --workdir /data/docs -it ghcr.io/ifilot/sphinx:v0.2.0 make html
+docker run --volume ./docs:/data/docs --workdir /data/docs -it ghcr.io/ifilot/sphinx:v0.3.0 make html
 ```
