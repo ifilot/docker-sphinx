@@ -56,6 +56,7 @@ RUN /data/env/bin/python3 -m pip install \
 	numpy \
 	scipy \
 	matplotlib \
-        autopep8
+    autopep8 \
+    pylint-report
 
 ENV PATH="/data/env/bin:$PATH"
