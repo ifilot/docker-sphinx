@@ -30,11 +30,6 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends
 	imagemagick \
 	ghostscript
 
-# install pip packages
-RUN apt-get install -y \
-	python3-sphinx \
-	dash
-
 RUN apt-get autoremove
 RUN apt-get clean
 
@@ -52,7 +47,11 @@ WORKDIR "/data"
 # create virtual environment
 RUN python3 -m venv /data/env
 RUN /data/env/bin/python3 -m pip install \
+	sphinx \
 	sphinx-rtd-theme \
-	sphinxcontrib-tikz
+	sphinxcontrib-tikz \
+	numpy \
+	scipy \
+	matplotlib
 
 ENV PATH="/data/env/bin:$PATH"

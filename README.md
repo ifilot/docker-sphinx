@@ -7,7 +7,22 @@
 ## Purpose
 
 Debian environment with Sphinx packages installed for compilation of Sphinx
-documentation packages.
+documentation packages and for testing small Python scripts with dependencies
+related to numerical modelling.
+
+## List of available Python packages
+
+### Sphinx packages
+
+* sphinx
+* sphinx-rtd-theme
+* sphinxcontrib-tikz
+
+### Numerical modelling packages
+
+* numpy
+* scipy
+* matplotlib
 
 ## Usage
 
