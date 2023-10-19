@@ -40,8 +40,8 @@ RUN apt-get clean
 RUN useradd -ms /bin/bash sphinx
 
 # create new folder
-RUN mkdir /data
-RUN chown -R sphinx:sphinx /data
+RUN mkdir /data /tests
+RUN chown -R sphinx:sphinx /data /tests
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 USER sphinx
@@ -57,6 +57,11 @@ RUN /data/env/bin/python3 -m pip install \
 	scipy \
 	matplotlib \
     autopep8 \
-    pylint-report
+    pylint-report \
+	pandas \
+	openpyxl
+
+COPY tests/pandas-test.py /test/pandas-test.py
+RUN /data/env/bin/python3 /test/pandas-test.py
 
 ENV PATH="/data/env/bin:$PATH"

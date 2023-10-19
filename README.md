@@ -23,6 +23,7 @@ related to numerical modelling.
 * numpy
 * scipy
 * matplotlib
+* pandas (+openpyxl)
 
 ### Other
 
@@ -34,11 +35,11 @@ related to numerical modelling.
 Ensure a copy of the docker image is present
 
 ```bash
-docker pull ghcr.io/ifilot/sphinx:v0.4.0
+docker pull ghcr.io/ifilot/sphinx:v0.5.0
 ```
 
 To compile the Sphinx documentation locally, run
 
 ```bash
-docker run --volume ./docs:/data/docs --workdir /data/docs -it ghcr.io/ifilot/sphinx:v0.4.0 make html
+docker run --volume ./docs:/data/docs --workdir /data/docs -it ghcr.io/ifilot/sphinx:v0.5.0 make html
 ```
