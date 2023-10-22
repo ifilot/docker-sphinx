@@ -36,15 +36,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends
 RUN apt-get autoremove
 RUN apt-get clean
 
-# create a new user
-RUN useradd -ms /bin/bash sphinx
-
 # create new folder
 RUN mkdir /data /tests
-RUN chown -R sphinx:sphinx /data /tests
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-USER sphinx
 WORKDIR "/data"
 
 # create virtual environment
