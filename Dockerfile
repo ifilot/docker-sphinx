@@ -15,6 +15,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install --yes --no-install-recommends
 	curl \
 	wget \
 	python3 \
+	python3-dev \
+	libpython3-dev \
+	cython3 \
 	python3-pip \
 	python3-full \
 	default-jre-headless \
@@ -54,7 +57,8 @@ RUN /data/env/bin/python3 -m pip install \
     autopep8 \
     pylint-report \
 	pandas \
-	openpyxl
+	openpyxl \
+	cython
 
 COPY tests/pandas-test.py /test/pandas-test.py
 RUN /data/env/bin/python3 /test/pandas-test.py
