@@ -60,7 +60,7 @@ RUN /data/env/bin/python3 -m pip install \
 	openpyxl \
 	cython \
 	pydata-sphinx-theme \
-        spinx_design
+        sphinx_design
 
 COPY tests/pandas-test.py /test/pandas-test.py
 RUN /data/env/bin/python3 /test/pandas-test.py
