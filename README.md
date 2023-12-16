@@ -17,6 +17,7 @@ related to numerical modelling.
 * sphinx
 * sphinx-rtd-theme
 * sphinxcontrib-tikz
+* pydata-sphinx-theme
 
 ### Numerical modelling packages
 

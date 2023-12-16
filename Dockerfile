@@ -54,11 +54,12 @@ RUN /data/env/bin/python3 -m pip install \
 	numpy \
 	scipy \
 	matplotlib \
-    autopep8 \
-    pylint-report \
+	autopep8 \
+	pylint-report \
 	pandas \
 	openpyxl \
-	cython
+	cython \
+	pydata-sphinx-theme
 
 COPY tests/pandas-test.py /test/pandas-test.py
 RUN /data/env/bin/python3 /test/pandas-test.py
